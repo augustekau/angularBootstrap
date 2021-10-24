@@ -5,9 +5,21 @@
     margin-right: auto;
     max-width: 400px;
   }
-  h1,
-  h2,
+  h3,
   p {
     text-align: center;
+  }
+  .product-info {
+    display: block;
+    text-align: center;
+  }
+  .card {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+  }
+  .fa-shopping-cart {
+    color: white;
   }
 }
