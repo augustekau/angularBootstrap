@@ -1,1 +1,7 @@
-<p>product-list works!</p>
+<div class="row">
+  <div class="col-12"><h1>Products</h1></div>
+  <!-- item kaip vadinsime kintamaji ciklo viduje, products -duomenu kintamasis is product-list.component.ts -->
+  <div class="col-sm-4" *ngFor="let item of products">
+    <app-product-card [product]="item"></app-product-card>
+  </div>
+</div>
