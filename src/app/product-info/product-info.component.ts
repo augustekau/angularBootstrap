@@ -8,12 +8,21 @@ import { ELEMENT_DATA } from "../data";
   styleUrls: ["./product-info.component.scss"],
 })
 export class ProductInfoComponent implements OnInit {
-  productId = 0;
+  id: any;
   product: any = {};
   constructor(private route: ActivatedRoute, private router: Router) {}
 
   ngOnInit(): void {
-    this.productId = this.route.snapshot.params.id;
-    this.product = ELEMENT_DATA[this.productId - 1];
+    this.id = this.route.snapshot.paramMap.get("id");
+
+    for (let i = 0; i < ELEMENT_DATA.length; i++) {
+      if (ELEMENT_DATA[i].id == this.id) {
+        this.product = ELEMENT_DATA[i];
+        break;
+      }
+    }
+
+    // for ciklas naudojamas instead this
+    // this.product = ELEMENT_DATA[this.id - 1];
   }
 }
